@@ -13,8 +13,8 @@ from util.read_write import export
 
 open_isolines = []
 closed_isolines = []
-blockmap = np.array(Image.open(argv[1])).astype(int)
-cellmap = CellMap(blockmap)
+values = np.array(Image.open(argv[1])).astype(int)
+cellmap = CellMap(values)
 
 
 # kick off tracing from all four edges of the bounding area.
