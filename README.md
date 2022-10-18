@@ -6,7 +6,7 @@
 
 # About
 
-This is a variation of the tried-and-true marching squares algorithm. In [this implementation](src/vector_marching_squares.py), the isolines are simultaneously created and vectorized using a 'tracing' algorithm.
+This is a variation of the tried-and-true marching squares algorithm. In [this implementation](src/tracing.py), the isolines are simultaneously created and vectorized using a 'tracing' algorithm.
 
 # Why vectorization?
 
@@ -43,14 +43,14 @@ isoline-paths.json
 
 ### Open isolines
 
-Open isolines are not bounded entirely by the matrix area and have a start and an end. The direction of the slope (`left` or `right`) is described relative to the starting coordinates of the isoline.
+Open isolines are not bounded entirely by the matrix area and have a start and an end. The direction of the slope (`"left"` or `"right"`) is described relative to the starting coordinates of the isoline.
 
 ### Closed isolines
 
 Closed isolines are circular and bounded entirely by the area of the matrix. Closed isolines are always drawn in an anticlockwise direction. The direction of the slope can be determined based on the type of closed isoline:
 
-- `hill` type means that the enclosed portion of the isoline is higher
-- `depression` type means that the enclosed portion of the isoline is lower.
+- `"hill"` type means that the enclosed portion of the isoline is higher
+- `"depression"` type means that the enclosed portion of the isoline is lower.
 
 # Limitations
 
